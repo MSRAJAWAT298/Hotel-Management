@@ -1,0 +1,34 @@
+RewriteEngine On
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will match
+# $ in the regular expression makes the matching stop
+
+# Rewrite for hotel_details.php/?id=3
+RewriteRule hotel_details/([0-9a-zA-Z]+)$ hotel_details.php?id=$1 [NC,L]
+# Rewrite for search_hotel.php
+RewriteRule search_hotel search_hotel.php [NC,L]
+
+# for admin pages.......
+# Rewrite for admin/index.php
+# RewriteRule admin/([0-9a-zA-Z]+)$ admin/index.php [NC,L]
+
+# Rewrite for admin/dasboard.php
+RewriteRule admin/dasboard admin/dasboard.php [NC,L]
+
+# Rewrite for admin/add_hotels.php
+RewriteRule admin/add_hotels admin/add_hotels.php [NC,L]
+
+# Rewrite for admin/add_industry.php
+RewriteRule admin/add_industry admin/add_industry.php [NC,L]
+
+# Rewrite for admin/view_industry.php
+RewriteRule admin/view_industry admin/view_industry.php [NC,L]
+
+# Rewrite for admin/view_hotels.php
+RewriteRule admin/view_hotels admin/view_hotels.php [NC,L]
+
+# Rewrite for admin/setting.php
+RewriteRule admin/setting admin/setting.php [NC,L]
+
+# Rewrite for admin/logout.php
+RewriteRule admin/logout admin/logout.php [NC,L]
